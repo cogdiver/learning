@@ -1,0 +1,158 @@
+/* Dark Mode Styles */
+html[data-theme='dark'] {
+  --ifm-link-color:#48ADF6;
+  --ifm-heading-color: var(--color-gray-12);
+  --ifm-navbar-background-color:var(--color-gray-82);
+  --ifm-background-color:var(--color-gray-90);
+  --ifm-hero-background-color: var(--ifm-background-color);
+  --ifm-table-stripe-background: var(--color-gray-86-alpha-04);
+  --ifm-pre-background:var(--color-gray-86);
+  --ifm-code-background:var(--color-gray-86);
+  --ifm-dropdown-background-color: var(--color-gray-78);
+  --ifm-card-background-color:var(--color-gray-82);
+  --ifm-footer-background-color:var(--color-gray-82);
+  --collapse-button-bg-color-dark: var(--color-gray-86);
+  --docsearch-searchbox-background: var(--color-gray-90) !important;
+  --docsearch-searchbox-focus-background: var(--color-gray-86) !important;
+
+  code {
+    background-color: var(--color-gray-78);
+  }
+
+  pre {
+    code {
+      background-color: var(--ifm-code-background);
+    }
+  }
+
+  .alert {
+    pre {
+      code {
+        --ifm-code-background: var(--color-gray-78);
+      }
+    }
+  }
+
+  .docusaurus-highlight-code-line {
+    background-color: var(--color-gray-78);
+  }
+
+  .card:hover {
+    --ifm-card-background-color:var(--color-gray-78) !important;
+  }
+
+  .header-github-link {
+    &:hover {
+      opacity: 0.6;
+    }
+    &::before {
+      background: url("data:image/svg+xml,%3Csvg viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='white' d='M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12'/%3E%3C/svg%3E")
+        no-repeat;
+    }
+  }
+
+  .header-linkedin-link {
+    &:hover {
+      opacity: 0.6;
+    }
+    &::before {
+      background: url("data:image/svg+xml,%3Csvg viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='white' d='M21.3333 0C22.0406 0 22.7189 0.280951 23.219 0.781048C23.719 1.28115 24 1.95942 24 2.66667V21.3333C24 22.0406 23.719 22.7189 23.219 23.219C22.7189 23.719 22.0406 24 21.3333 24H2.66667C1.95942 24 1.28115 23.719 0.781048 23.219C0.280951 22.7189 0 22.0406 0 21.3333V2.66667C0 1.95942 0.280951 1.28115 0.781048 0.781048C1.28115 0.280951 1.95942 0 2.66667 0H21.3333ZM20.6667 20.6667V13.6C20.6667 12.4472 20.2087 11.3416 19.3936 10.5264C18.5784 9.71128 17.4728 9.25333 16.32 9.25333C15.1867 9.25333 13.8667 9.94667 13.2267 10.9867V9.50667H9.50667V20.6667H13.2267V14.0933C13.2267 13.0667 14.0533 12.2267 15.08 12.2267C15.5751 12.2267 16.0499 12.4233 16.3999 12.7734C16.75 13.1235 16.9467 13.5983 16.9467 14.0933V20.6667H20.6667ZM5.17333 7.41333C5.76742 7.41333 6.33717 7.17733 6.75725 6.75725C7.17733 6.33717 7.41333 5.76742 7.41333 5.17333C7.41333 3.93333 6.41333 2.92 5.17333 2.92C4.57571 2.92 4.00257 3.1574 3.57999 3.57999C3.1574 4.00257 2.92 4.57571 2.92 5.17333C2.92 6.41333 3.93333 7.41333 5.17333 7.41333ZM7.02667 20.6667V9.50667H3.33333V20.6667H7.02667Z'/%3E%3C/svg%3E")
+        no-repeat;
+    }
+  }
+
+  .header-gitlab-link {
+    &:hover {
+      opacity: 0.6;
+    }
+    &::before {
+      background: url("data:image/svg+xml,%3Csvg viewBox='94 94 192 192' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='white' d='M282.83,170.73l-.27-.69-26.14-68.22a6.81,6.81,0,0,0-2.69-3.24,7,7,0,0,0-8,.43,7,7,0,0,0-2.32,3.52l-17.65,54H154.29l-17.65-54A6.86,6.86,0,0,0,134.32,99a7,7,0,0,0-8-.43,6.87,6.87,0,0,0-2.69,3.24L97.44,170l-.26.69a48.54,48.54,0,0,0,16.1,56.1l.09.07.24.17,39.82,29.82,19.7,14.91,12,9.06a8.07,8.07,0,0,0,9.76,0l12-9.06,19.7-14.91,40.06-30,.1-.08A48.56,48.56,0,0,0,282.83,170.73Z'/%3E%3C/svg%3E")
+        no-repeat;
+    }
+  }
+
+  .no-shadow {
+    background-color: var(--color-gray-0);
+  }
+
+  .theme-doc-sidebar-container {
+    background-color: var(--color-gray-86);
+    button[class*='collapseSidebarButton_'], div[class*='collapsedDocSidebar_'] {
+      &::before {
+        background: url('/icons/collapse-arrow-left-light.svg') no-repeat;
+      }
+      &:hover {
+        background-color: var(--color-gray-82);
+      }
+    }
+  }
+
+  .theme-doc-sidebar-menu {
+    .theme-doc-sidebar-item-category {
+      .theme-doc-sidebar-item-link {
+        .menu__link {
+          border-left: 0.1rem solid var(--color-gray-74);
+        }
+        .menu__link--active {
+          border-left: 0.1rem solid var(--color-gray-16);
+        }
+      }
+    }
+    .theme-doc-sidebar-item-link-level-1.menu__list-item, .theme-doc-sidebar-item-link-level-2.menu__list-item {
+      &::before {
+        background: url('/icons/dot.svg') no-repeat;
+      }
+      .menu__link {
+        border-left: none;
+      }
+    }
+  }
+
+  .table-of-contents {
+    &.table-of-contents__left-border {
+      border-left: 1px solid var(--color-gray-74);
+    }
+    .table-of-contents__link--active {
+      border-left: 0.125rem solid var(--color-gray-16);
+    }
+  }
+
+  .admonition {
+    &.alert {
+      background-color: var(--color-gray-86);
+    }
+
+    .admonition-icon svg {
+      fill: var(--ifm-alert-border-color);
+      stroke: var(--ifm-alert-border-color);
+    }
+  }
+
+  .theme-edit-this-page {
+    &::before, &::after {
+      filter: invert(1);
+    }
+    color: var(--ifm-color-gray-2);
+    &:hover {
+      color: var(--ifm-color-gray-0);
+    }
+  }
+
+  .pagination-nav {
+    .pagination-nav__item {
+      &:not(:empty) {
+        background-color: var(--color-gray-86);
+        &:hover {
+          background-color: var(--color-gray-82);
+        }
+
+        .pagination-nav__link {
+          color: var(--ifm-color-content-secondary);
+        }
+      }
+      &:first-child .pagination-nav__label::before, &--next .pagination-nav__label::after {
+        background: url("/icons/arrow_right-light.svg") no-repeat;
+      }
+    }
+  }
+}
