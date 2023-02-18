@@ -1,0 +1,38 @@
+show dbs
+use examples
+db
+db.examples.insertOne({saludo: "Hola, mundo desde mongo!"})
+db.examples.find()
+
+db.inventory.insertMany([
+    { _id: 1, item: { name: "ab", code: "123" }, qty: 15, tags: [ "A", "B", "C" ] },
+    { _id: 2, item: { name: "cd", code: "123" }, qty: 20, tags: [ "B" ] },
+    { _id: 3, item: { name: "ij", code: "456" }, qty: 25, tags: [ "A", "B" ] },
+    { _id: 4, item: { name: "xy", code: "456" }, qty: 30, tags: [ "B", "A" ] },
+    { _id: 5, item: { name: "mn", code: "000" }, qty: 20, tags: [ [ "A", "B" ], "C" ] }
+])
+
+// $or
+db.inventory.find({$or: [{qty: {$gt: 25}}, {qty: {$lte: 15}}]})
+
+// $gte
+db.inventory.find({qty: {$gte: 25}})
+
+// $size
+db.inventory.find({tags: {$size: 2}})
+
+// Insertemos estos documentos de ejemplo en la colección survey
+db.survey.insertMany([
+    { _id: 1, results: [ { product: "abc", score: 10 }, { product: "xyz", score: 5 } ] },
+    { _id: 2, results: [ { product: "abc", score: 8 }, { product: "xyz", score: 7 } ] },
+    { _id: 3, results: [ { product: "abc", score: 7 }, { product: "xyz", score: 8 } ] }
+])
+
+// $elemMatch
+db.survey.find(
+   { results: { $elemMatch: { product: "xyz", score: { $gte: 8 } } } }
+)
+
+db.survey.find(
+   { results: { $elemMatch: { product: "xyz" } } }
+)
