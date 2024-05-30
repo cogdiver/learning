@@ -1,0 +1,12 @@
+services:
+  app:
+    container_name: matlab_app
+    build: .
+    entrypoint: /bin/run.sh
+    command: -browser
+    volumes:
+      - .:/usr/src/app
+    ports:
+    #  - 5901:5901
+    #  - 6080:6080
+     - 8888:8888
