@@ -1,0 +1,8 @@
+__pycache__
+target/
+
+# 0001-python-concurrency
+data/[^.]*
+
+# 0008-time-serie
+0008-time-series/TimeSeriesForecastingInPython/
