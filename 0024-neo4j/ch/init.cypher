@@ -14,6 +14,7 @@ CREATE
 
 (TheCompany:COMPANY{name:"The Company"}),
 
+(DaveC)-[:MEMBER_OF]->(FN),
 (BobJ)-[:MEMBER_OF]->(HR),
 (JoshS)-[:MEMBER_OF]->(HR),
 (JuliaG)-[:MEMBER_OF]->(HR),

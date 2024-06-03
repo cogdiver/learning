@@ -1,0 +1,19 @@
+services:
+  neo4j_db:
+    container_name: neo4j_app
+    image: neo4j:5.20.0
+    restart: always
+    ports:
+      - 7474:7474
+      - 7687:7687
+    environment:
+      - NEO4J_AUTH=${USERNAME}/${PASSWORD}
+
+  client:
+    container_name: neo4j_py_client
+    build: client
+    command: tail -f /dev/null
+    env_file:
+      - .env
+    volumes:
+      - ./client:/app
