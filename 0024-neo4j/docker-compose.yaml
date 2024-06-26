@@ -17,3 +17,4 @@ services:
       - .env
     volumes:
       - ./client:/app
+      - ./ch:/data

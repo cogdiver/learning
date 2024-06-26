@@ -1,4 +1,5 @@
 from neo4j import GraphDatabase
+from vars import URL, USERNAME, PASSWORD
 
 
 # Manejo de la conexión a la base de datos
@@ -26,3 +27,6 @@ class Neo4jConnection:
         finally:
             if session is not None:
                 session.close()
+
+# Conectar a la base de datos
+conn = Neo4jConnection(uri=URL, user=USERNAME, pwd=PASSWORD)

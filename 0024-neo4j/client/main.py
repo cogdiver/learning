@@ -1,14 +1,16 @@
-from vars import URL, USERNAME, PASSWORD
-from connection import Neo4jConnection
+from connection import conn
+from query import run_query, run_query_from_file
 
 
-# Conectar a la base de datos
-conn = Neo4jConnection(uri=URL, user=USERNAME, pwd=PASSWORD)
+# run_query_from_file("/data/init.cypher")
 
 # Realizar una consulta
-result = conn.query("MATCH (n) RETURN n LIMIT 5")
-for record in result:
-    print(record)
+result = run_query("MATCH (n) RETURN n LIMIT 5")
+if result:
+    for record in result:
+        print(record)
+else:
+    print("Not results")
 
 # Cerrar la conexión
 conn.close()
