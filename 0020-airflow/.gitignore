@@ -1,0 +1,6 @@
+__pycache__
+.env
+*.log
+*.py.log
+logs/scheduler/latest
+*.txt
